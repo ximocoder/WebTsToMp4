@@ -21,6 +21,7 @@ namespace WebtsToMp4
 
         private void btnProcess_Click(object sender, EventArgs e)
         {
+            this.textBox1.Text = "https://static.wouzee.com/nas01/video/133c95e/8ae41002e3313b6e0bbc642177c5d2d2_nhd.mp4/seg-1-v1-a1.ts";
             GetUrlData(this.textBox1.Text);
         }
 
@@ -49,7 +50,7 @@ namespace WebtsToMp4
                     using (Stream responseStream = httpResponse.GetResponseStream())
                     {
                         using (FileStream localFileStream =
-                            new FileStream(Path.Combine(@"C:\\tmp\\", @"tmp.mp4"), FileMode.Append))
+                            new FileStream(Path.Combine(@"C:\\tmp\\", @"alvaro.mp4"), FileMode.Append))
                         {
                             var buffer = new byte[4096];
                             long totalBytesRead = 0;
